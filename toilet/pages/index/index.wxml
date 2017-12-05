@@ -1,0 +1,21 @@
+  <view class="map_container" style='bottom:{{container_bottom}}px'> 
+    <!--定义页面结构，可以使用地图组件也能使用其他组件 -->
+    <map 
+        id='map' 
+        latitude='{{userLocation.latitude}}' 
+        longitude='{{userLocation.longitude}}'
+        show-location="true"
+        scale="16"
+        markers='{{markers}}'
+        controls='{{controls}}'
+        bindcontroltap="controltap"
+        bindmarkertap="makertap"
+        style='width:100%;height:100%'
+        >
+    </map> 
+  </view> 
+  <view class="map_text" wx:if="{{showOrHide}}">
+    <text class="h1">{{textData.name}}</text>
+    <text>{{textData.desc}}</text>
+  </view>
+
